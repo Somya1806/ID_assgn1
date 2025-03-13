@@ -1,0 +1,13 @@
+select * from course where dept_name='Physics' or dept_name='Music' or dept_name='Finance' or dept_name='Biology';
+select * from instructor where name like 'k%' and salary > 65000;
+select name,dept_name,(salary+(salary*1.05)+(salary*0.2)) as gross_salary,(salary+(salary*1.05)+(salary*0.2)-(salary*0.3))as net_salary from instructor;
+select * from instructor where salary between 60000 and 80000;
+select * from instructor where name like'_r%';
+select name from instructor where dept_name = 'comp.sci.' order by salary DESC;
+update instructor set salary=salary*1.15;
+update instructor set salary=salary*1.03 where dept_name='comp.sci.' and salary<70000;
+select name,(salary*12) as annual_salary from instructor;
+update instructor set name='Game_Design' where name = 'Game theory';
+delete from instructor where dept_name ='history';
+delete from instructor where dept_name like 'BIO%';
+
