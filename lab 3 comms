@@ -1,0 +1,80 @@
+1....
+
+A)
+select sub_code,Title,Credits from Course where department in('Physics','Music','Finance','Biology');
+
+B)
+select * from Instructor where name like 'K%' and salary>65000;
+
+C)
+select name,department,(salary + (1.05*salary) + (0.20*salary)) as gross_sal, ((salary + (1.05*salary) + (0.20*salary))-(0.30*salary)) as net_sal from Instructor;
+
+D)
+select * from Instructor where salary between 60000 and 80000;
+
+E)
+select * from Instructor where name like '_r%';
+
+F)
+select name from Instructor where department = 'Comp.Sci.' order by salary desc;
+
+G)
+update Instructor set salary=salary+(salary*0.15);
+
+H)
+update Instructor set salary=salary+(salary*0.03) where department='Comp.Sci.' and salary<70000;
+
+I)
+select name, salary*12 as annual_sal from Instructor;
+
+J)
+Update Course set title='Game Theory' where title='Game Design';
+
+K)
+delete from Instructor where department='History';
+
+L)
+delete from Course where sub_code like 'Bio%';
+
+
+2...
+
+A)
+select avg(salary) as Avg_salary from Instructor where department='Physics';
+
+B)
+select department, avg(salary) as avg_sal from Instructor group by department;
+
+C)
+select id,name,department from Instructor where salary=(select max(salary) from Instructor);
+
+D)
+select count(*) as num_inst from Instructor where department='Comp.Sci.';
+
+E)
+select sum(credits) as tot_credit from Course where department='Comp.Sci.';
+
+F)
+select department, count(*) as num_inst, sum(salary) as total_sal from Instructor where department in ('Physics','Comp.Sci.) group by department;
+
+G)
+select sum(credits) as total_cred from Course where department in ('Comp.Sci.','Biology');
+
+H)
+select building, sum(budget) as total_budget from Department group by building;
+
+I)
+
+
+J)
+
+
+K)
+
+
+L)
+
+
+
+
+

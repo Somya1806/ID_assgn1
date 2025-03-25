@@ -1,0 +1,78 @@
+A)
+desc Instructor;
+desc Course;
+desc Prereq;
+desc Department;
+desc Teaches;
+
+B)
+select  * from Instructor;
+select * from Course;
+select * from Department;
+select * from Prereq;
+Select * from Teaches;
+
+C)
+select name,dept_name from Instructor;
+
+D)
+select name, salary from Instructor where dept_name='Comp.Sci.';
+
+E)
+select * from Instructor where dept_name='Physics' and salary<90000;
+
+F)
+select name from Instructor where dept_name != 'Comp.Sci.';
+
+G)
+select distinct dept_name from Instructor;
+
+H)
+select course_id from Teaches where semester='Spring' and year=2009;
+
+I)
+select title from Course where dept_name='Comp.Sci.' and credits!=3;
+
+J)
+select * from Course order by dept_name desc;
+
+K)
+alter table Instructor add date_of_join varchar2(10);
+
+L)
+update Instructor set date_of_join = '2012-11-21' where name = 'Wu';
+
+M)
+alter table Instructor rename column dept_name to department;
+alter table Course rename column dept_name to department;
+alter table Department rename column dept_name to department;
+
+N)
+alter table Prereq rename to Prerequired;
+
+O)
+alter table Course rename column course_id to sub_code;
+alter table Prerequired rename column course_id to sub_code;
+alter table Teaches rename column course_id to sub_code;
+
+P)
+alter table Instructor modify name varchar2(50);
+
+Q)
+alter table Instructor rename to Faculty_Info;
+
+R)
+alter table Course modify sub_code varchar2(8);
+
+S)
+drop table Prerequired;
+
+T)
+alter table Department rename column Building to Builder;
+
+
+
+
+
+
+

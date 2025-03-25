@@ -1,0 +1,79 @@
+
+Login:
+sqlplus id2241018018/id2241018018@//172.30.16.99/ora11g
+
+
+
+
+For Instructor table:
+create table Instructor(id number(5), name varchar2(30),dept_name varchar2(20), salary number(6));
+
+insert into Instructor(id,name,dept_name,salary) values(10101,'Srinivasan','Comp.Sci.',65000);
+insert into Instructor(id,name,dept_name,salary) values(12121,'Wu','Finance',90000);
+insert into Instructor(id,name,dept_name,salary) values(15151,'Mozart','Music',40000);
+insert into Instructor(id,name,dept_name,salary) values(22222,'Einstein','Physics',95000);
+insert into Instructor(id,name,department,salary) values(32343,'El Said','History',60000);
+insert into Instructor(id,name,dept_name,salary) values(33456,'Gold','Physics',87000);
+insert into Instructor(id,name,dept_name,salary) values(45565,'Katz','Comp.Sci.',75000);
+insert into Instructor(id,name,department,salary) values(58583,'Califieri','History',62000);
+insert into Instructor(id,name,dept_name,salary) values(76543,'Singh','Finance',80000);
+insert into Instructor(id,name,dept_name,salary) values(76766,'Crick','Biology',72000);
+insert into Instructor(id,name,dept_name,salary) values(83821,'Brandt','Comp.Sci.',92000);
+insert into Instructor(id,name,dept_name,salary) values(98345,'Kim','Elec. Eng.',80000);
+
+
+
+
+
+For Course Table:
+create table Course(course_id varchar2(10),title varchar2(30), dept_name varchar2(20), credits number(2));
+
+insert into Course(sub_code,title,department,credits) values('BIO-101','Intro. to Biology','Biology',4);
+insert into Course(sub_code,title,department,credits) values('BIO-301','Genetics','Biology',4);
+insert into Course(sub_code,title,department,credits) values('BIO-399','Computational Biology','Biology',3);
+insert into Course(course_id,title,dept_name,credits) values('CS-101','Intro. to Computer Science','Comp.Sci.',4);
+insert into Course(course_id,title,dept_name,credits) values('CS-190','Game Design','Comp.Sci.',4);
+insert into Course(course_id,title,dept_name,credits) values('CS-315','Robotics','Comp.Sci.',3);
+insert into Course(course_id,title,dept_name,credits) values('CS-319','Image Processing','Comp.Sci.',3);
+insert into Course(course_id,title,dept_name,credits) values('CS-347','Database System Concepts','Comp.Sci.',3);
+insert into Course(course_id,title,dept_name,credits) values('EE-181','Intro. to Digital Systems','Elec. Eng.',3);
+insert into Course(course_id,title,dept_name,credits) values('FIN-201','Investment Banking','Finance',3);
+insert into Course(sub_code,title,department,credits) values('HIS-351','World History','History',3);
+insert into Course(course_id,title,dept_name,credits) values('MU-199','Music Video Production','Music',3);
+insert into Course(course_id,title,dept_name,credits) values('BPHY-101','Physical Principles','Physics',4);
+
+
+
+
+For Prereq table:
+create table Prereq(course_id varchar2(10), prereq_id varchar2(10));
+
+insert into Prereq(course_id,prereq_id) values('BIO-301','BIO-101');
+insert into Prereq(course_id,prereq_id) values('BIO-399','BIO-101');
+insert into Prereq(course_id,prereq_id) values('CS-190','CS-101');
+insert into Prereq(course_id,prereq_id) values('CS-319','CS-101');
+insert into Prereq(course_id,prereq_id) values('CS-315','CS-101');
+insert into Prereq(course_id,prereq_id) values('CS-347','CS-101');
+insert into Prereq(course_id,prereq_id) values('EE-181','PHY-101');
+
+
+
+For Department table:
+create table Department(dept_name varchar2(20), building varchar2(20), budge number(10));
+
+insert into Department(dept_name,building,budget) values('Biology','Watson',90000);
+insert into Department(dept_name,building,budget) values('Comp.Sci.','Taylor',100000);
+insert into Department(dept_name,building,budget) values('Elec. Eng.','Taylor',85000);
+insert into Department(dept_name,building,budget) values('Finance','Painter',120000);
+insert into Department(dept_name,building,budget) values('History','Painter',50000);
+insert into Department(dept_name,building,budget) values('Music','Packard',80000);
+insert into Department(dept_name,building,budget) values('Physics','Watson',70000);
+
+
+
+For Teaches table:
+create table Teaches(id number(5), course_id varchar2(10), sec_id number(2), semester varchar2(10), year number(4));
+
+insert into Teaches(id,course_id,sec_id,semester,year) values(10101,'CS-101',1,'Fall',2009);
+
+
